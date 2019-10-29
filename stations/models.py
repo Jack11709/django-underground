@@ -17,7 +17,7 @@ class Station(models.Model):
     lat = models.FloatField()
     lon = models.FloatField()
     is_night_tube = models.BooleanField()
-    zone = models.ForeignKey(Zone, related_name='stations', on_delete=models.DO_NOTHING)
+    zone = models.ForeignKey(Zone, related_name='stations', on_delete=models.DO_NOTHING, blank=True)
     lines = models.ManyToManyField(Line, related_name='stations', blank=True)
 
     def __str__(self):
