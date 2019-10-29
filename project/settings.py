@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
-    'stations'
+    'rest_framework', # make sure rest framework is always added first 
+    'stations' # then register each django project after
 ]
 
 MIDDLEWARE = [
@@ -82,7 +82,7 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': 5432
     }
-}
+} # DB setup, removed OG config which was the SQLite straight away and test with POSTGRES, requires installation of psycog2-binary to work.
 
 
 # Password validation
