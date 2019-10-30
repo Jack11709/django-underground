@@ -1,0 +1,258 @@
+[
+{
+  "model": "stations.line",
+  "pk": 1,
+  "fields": {
+    "name": "Central"
+  }
+},
+{
+  "model": "stations.line",
+  "pk": 2,
+  "fields": {
+    "name": "District"
+  }
+},
+{
+  "model": "stations.line",
+  "pk": 3,
+  "fields": {
+    "name": "Circle"
+  }
+},
+{
+  "model": "stations.line",
+  "pk": 4,
+  "fields": {
+    "name": "Piccadilly"
+  }
+},
+{
+  "model": "stations.line",
+  "pk": 5,
+  "fields": {
+    "name": "Jubilee"
+  }
+},
+{
+  "model": "stations.line",
+  "pk": 6,
+  "fields": {
+    "name": "Northern"
+  }
+},
+{
+  "model": "stations.line",
+  "pk": 7,
+  "fields": {
+    "name": "Hammersmith & City"
+  }
+},
+{
+  "model": "stations.line",
+  "pk": 8,
+  "fields": {
+    "name": "Waterloo & City"
+  }
+},
+{
+  "model": "stations.line",
+  "pk": 9,
+  "fields": {
+    "name": "Bakerloo"
+  }
+},
+{
+  "model": "stations.line",
+  "pk": 10,
+  "fields": {
+    "name": "Metropolitan"
+  }
+},
+{
+  "model": "stations.line",
+  "pk": 11,
+  "fields": {
+    "name": "Victoria"
+  }
+},
+{
+  "model": "stations.zone",
+  "pk": 1,
+  "fields": {
+    "zone": 1
+  }
+},
+{
+  "model": "stations.zone",
+  "pk": 2,
+  "fields": {
+    "zone": 2
+  }
+},
+{
+  "model": "stations.zone",
+  "pk": 3,
+  "fields": {
+    "zone": 3
+  }
+},
+{
+  "model": "stations.zone",
+  "pk": 4,
+  "fields": {
+    "zone": 4
+  }
+},
+{
+  "model": "stations.zone",
+  "pk": 5,
+  "fields": {
+    "zone": 5
+  }
+},
+{
+  "model": "stations.zone",
+  "pk": 6,
+  "fields": {
+    "zone": 6
+  }
+},
+{
+  "model": "stations.zone",
+  "pk": 7,
+  "fields": {
+    "zone": 7
+  }
+},
+{
+  "model": "stations.zone",
+  "pk": 8,
+  "fields": {
+    "zone": 8
+  }
+},
+{
+  "model": "stations.zone",
+  "pk": 9,
+  "fields": {
+    "zone": 9
+  }
+},
+{
+  "model": "stations.station",
+  "pk": 1,
+  "fields": {
+    "name": "Aldgate East",
+    "lat": 51.5153,
+    "lon": 0.0722,
+    "is_night_tube": false,
+    "zone": 1,
+    "lines": [
+      2,
+      3,
+      7
+    ]
+  }
+},
+{
+  "model": "stations.station",
+  "pk": 2,
+  "fields": {
+    "name": "Liverpool Street",
+    "lat": 51.5188,
+    "lon": 0.0814,
+    "is_night_tube": true,
+    "zone": 1,
+    "lines": [
+      1,
+      3,
+      7,
+      10
+    ]
+  }
+},
+{
+  "model": "stations.station",
+  "pk": 3,
+  "fields": {
+    "name": "Whitechapel",
+    "lat": 51.5148,
+    "lon": 0.0651,
+    "is_night_tube": false,
+    "zone": 2,
+    "lines": [
+      2,
+      7
+    ]
+  }
+},
+{
+  "model": "stations.station",
+  "pk": 4,
+  "fields": {
+    "name": "Victoria",
+    "lat": 51.4952,
+    "lon": 0.1439,
+    "is_night_tube": true,
+    "zone": 1,
+    "lines": [
+      2,
+      3,
+      11
+    ]
+  }
+},
+{
+  "model": "stations.station",
+  "pk": 5,
+  "fields": {
+    "name": "Kings Cross St Pancras",
+    "lat": 51.5314,
+    "lon": 0.1261,
+    "is_night_tube": true,
+    "zone": 1,
+    "lines": [
+      3,
+      4,
+      6,
+      7,
+      10,
+      11
+    ]
+  }
+},
+{
+  "model": "stations.station",
+  "pk": 6,
+  "fields": {
+    "name": "Baker Street",
+    "lat": 51.5232,
+    "lon": 0.1569,
+    "is_night_tube": true,
+    "zone": 1,
+    "lines": [
+      3,
+      5,
+      7,
+      9,
+      10
+    ]
+  }
+},
+{
+  "model": "stations.station",
+  "pk": 7,
+  "fields": {
+    "name": "Tottenham Court Road",
+    "lat": 51.5163,
+    "lon": 0.13,
+    "is_night_tube": true,
+    "zone": 1,
+    "lines": [
+      1,
+      6
+    ]
+  }
+}
+]

@@ -1,9 +1,9 @@
-from django.urls import path # included by default
+from django.urls import path 
 from .views import StationList, StationDetail, ZoneList, ZoneDetail, LineList, LineDetail # import our DRF views
 
 urlpatterns = [
-    path('stations', StationList.as_view()),
-    path('stations/<int:pk>/', StationDetail.as_view()),
+    path('stations', StationList.as_view(), name='stations-list'),
+    path('stations/<int:pk>/', StationDetail.as_view(), name='stations-detail'),
     path('zones', ZoneList.as_view()),
     path('zones/<int:pk>/', ZoneDetail.as_view()),
     path('lines', LineList.as_view()),

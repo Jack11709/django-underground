@@ -2,10 +2,12 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.exceptions import PermissionDenied
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 from django.conf import settings
 import jwt
 from .serializers import UserSerializer
+
+User = get_user_model()
 
 class Register(APIView):
 
@@ -26,11 +28,11 @@ class Login(APIView):
             raise PermissionDenied({'message': 'Invalid Credentials'})
 
     def post(self, request):
-
         email = request.data.get('email')
         password = request.data.get('password')
 
         user = self.get_user(email)
+        print(user.check_password(password))
         if not user.check_password(password):
             raise PermissionDenied({'message': 'Invalid Credentials'})
         

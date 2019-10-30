@@ -1,9 +1,10 @@
 # pylint: disable=no-member
 from rest_framework.authentication import BasicAuthentication
 from rest_framework.exceptions import PermissionDenied
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 from django.conf import settings
 import jwt
+User = get_user_model()
 
 class JWTAuthentication(BasicAuthentication):
 
@@ -13,7 +14,7 @@ class JWTAuthentication(BasicAuthentication):
         if not header:
             return None
 
-        if not header.startsWith('Bearer'):
+        if not header.startswith('Bearer'):
             return PermissionDenied({'message': 'Invalid Authorization Header'})
 
         token = header.replace('Bearer ', '')

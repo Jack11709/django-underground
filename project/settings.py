@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework', # make sure rest framework is always added first 
-    'stations' # then register each django project after
+    'stations',
+    'jwt_auth' # then register each django project after
 ]
 
 MIDDLEWARE = [
@@ -136,3 +137,5 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
     ],
 }
+
+AUTH_USER_MODEL = 'jwt_auth.User'
