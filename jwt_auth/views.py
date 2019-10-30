@@ -19,6 +19,7 @@ class Register(APIView):
 
         return Response(serializer.errors, status=422)
 
+# TODO Why is a seeded user not able to log in through this?
 class Login(APIView):
 
     def get_user(self, email):
