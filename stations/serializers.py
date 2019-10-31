@@ -1,6 +1,7 @@
 # pylint: disable=no-member
 from rest_framework import serializers
 from .models import Station, Zone, Line
+from jwt_auth.serializers import UserSerializer
 
 class NestedStationSerializer(serializers.ModelSerializer): # making use of our nested serializers, this is solving two problems, one, trying to references certain models before they are instantited, for example, we want to show stations on lines and lines on stations, we need one of them to come first. Also fixing the issues of circuluar referencing
 
@@ -24,6 +25,7 @@ class StationSerializer(serializers.ModelSerializer):
 
     zone = NestedZoneSerializer() # here is that nested serializer being used
     lines = NestedLineSerializer(many=True)
+    owner = UserSerializer()
 
     def create(self, data):
         zone_data = data.pop('zone')
@@ -38,7 +40,7 @@ class StationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Station
-        fields = ('id', 'name', 'lat', 'lon', 'is_night_tube', 'zone', 'lines') # and the adding of zone field with use that nested version, with no reference to station.
+        fields = ('id', 'name', 'lat', 'lon', 'is_night_tube', 'zone', 'lines', 'owner') # and the adding of zone field with use that nested version, with no reference to station.
 
 class ZoneSerializer(serializers.ModelSerializer):
 

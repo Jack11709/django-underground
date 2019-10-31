@@ -33,7 +33,6 @@ class Login(APIView):
         password = request.data.get('password')
 
         user = self.get_user(email)
-        print(user.check_password(password))
         if not user.check_password(password):
             raise PermissionDenied({'message': 'Invalid Credentials'})
         
